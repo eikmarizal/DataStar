@@ -1,0 +1,227 @@
+https://codeshare.io/5DvKWE
+
+Questions:
+
+=============================================================================
+Numpy - inClass Exercise
+
+
+1. 
+
+np.matrix(np.arange(0,9)).reshape(3,3) # Philip
+
+2. 
+
+b = np.random.random((10,10))
+print('min: ', b.min(), 'max: ', b.max()) # Philip
+
+3. 
+
+c = np.matrix(np.zeros((8,8)))
+c[::2, ::2] = 1
+c[1::2, 1::2] = 1 # Philip
+
+4. 
+d = b[:]
+d[d == d.max()] = 0 # Philip
+
+5. 
+
+e = np.matrix(np.eye(4)) # Philip
+
+6. 
+
+e2 = np.full((5,5),2) # Philip
+
+7. 
+
+f = np.random.normal((4,4,4)) # Philip
+
+8. 
+
+n = 10
+np.linspace(0,1,n) # Philip
+
+9. 
+
+np.arange(1,20,2)[::-1] # Philip
+
+
+
+=============================================================================
+Ex3:
+1.
+#Jet
+
+sentence = "the quick brown fox jumps over the lazy dog"
+word_lengths=[len(s) for s in sentence.split() if s!='the']
+print(word_lengths)
+
+#Drew
+sentence = "the quick brown fox jumps over the lazy dog"
+word = sentence.split()
+word_lengths = [ len(x) for x in word if x != 'the' ]
+print(word_lengths)
+
+
+#Chin Seng
+word = sentence.split()
+word_lengths = [ (len(x)) for x in word if x != "the" ]
+word_lengths
+
+[len(word) for word in sentence.split() if word != 'the'] #Philip
+
+2.
+#Jet
+numbers = [34.6, -203.4, 44.9, -68.3, -12.2, 44.6, 12.7]
+newlist=[int(s) for s in numbers if s>0]
+print(newlist)
+
+#
+#Drew
+numbers = [34.6, -203.4, 44.9, -68.3, -12.2, 44.6, 12.7]
+newlist = [ int(n) for n in numbers if n<0]
+print(newlist)
+
+#
+numbers = [34.6, -203.4, 44.9, -68.3, -12.2, 44.6, 12.7]
+newlist = [num for num in filter(lambda num: num<=0,numbers)]
+print (newlist)
+
+#Chin Seng
+numbers = [34.6, -203.4, 44.9, -68.3, -12.2, 44.6, 12.7]
+newlist = [ x for x in numbers if x < 0 ]
+newlist
+
+newlist = [int(x) for x in numbers if x < 0] #Philip
+
+3.
+#Jet
+Celcius = [43.6, 67.3, 43.6, 56.4]
+Farenheit=[round((9/5*a + 32),2) for a in Celcius]
+print(Farenheit)
+
+#Drew
+Celsius = [43.6, 67.3, 43.6, 56.4]
+Fahrenheit = [ 9/5*n + 32 for n in Celsius]
+print(Fahrenheit)
+
+#Chin Seng
+Celsius = [43.6, 67.3, 43.6, 56.4]
+Fahrenheit = [ (9/5*x)+32 for x in Celsius ]
+Fahrenheit
+
+#
+#Suva
+Fahrenheit = map(lambda Celcius:9/5*Celcius + 32, Celsius)
+print(list(Fahrenheit))
+ *I tried this way, but my last value isn't 2 decimal place. 
+
+4.
+#Jet
+coords1 = [(i,j) for i in range(4) for j in range(2)];
+print(coords1);
+
+ 
+5.
+set1 = ['ball','cheese','round']
+set2 = ['cake','rice','ham']
+
+combination = [i + j for i in set1 for j in set2]
+print(combination)
+
+#Jet
+set1 = ['ball','cheese','round']
+set2 = ['cake','rice','ham']
+set3=[(a,b) for a in set1 for b in set2]
+print(set3)f
+
+#Drew
+set1 = ['ball','cheese','round']
+set2 = ['cake','rice','ham']
+combined = [ a + ' ' + b for a in set1 for b in set2]
+print(combined)
+
+6.
+#Drew
+s = map(lambda x: x**2 , range(1,101,2))
+print(list(s))
+x = []
+for i in range (1,101):
+    x.append(i)
+filtered = list(filter( lambda y: y%2 == 1, x))
+print(filtered, '\n')
+squared = list(map( lambda z: z**2, filtered))
+print(squared)
+
+#Jet
+square=map(lambda x:x*x ,range(1,100,2))
+print(list(square))
+
+#Chin Seng
+odd_squares = map(lambda x: x**2, range(1, 100, 2))
+print(list(odd_squares))
+
+7.
+squares = [x ** 2 for x in range(1,101) if x % 2 != 0]
+print(squares)
+#Jet
+squares=[x*x for x in range(1,100) if x%2!=0]
+print(squares)
+
+#Drew
+x = []
+for i in range (1,101):
+    x.append(i)
+ans = [ i**2 for i in x if i%2 == 1]
+print(ans)
+
+y = [x*x for x in range(1,100,2)] #Philip
+
+#Chin Seng
+odd_squares2 = [ x**2 for x in range(1, 100, 2)]
+print(odd_squares2)
+
+8.
+#Jet
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+print(list(filter(lambda x: x[0]=='A',names)))
+
+#Drew
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+name = list(filter( lambda x: 'A' == x[0], names))
+print(name)
+
+#
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+nama = [n for n in  filter(lambda n: n[0]=="A",names)]
+print (nama)
+
+9.
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+A = [i for i in names if i[0]=='A']
+print(A)
+
+#Jet
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+startb=[x for x in names if x[0]=='B']
+print(startb)
+
+
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+newnames = [print(x) for x in names[:] if 'B' in x[0]]   
+
+B
+# write a lambda function to extract names that begin with 'A'
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+nameFilter = filter(lambda name: name[0] == 'A', names)
+print(list(nameFilter))
+
+# write a list comprehension to extract names that begin with 'B'
+names = ['Anne', 'Amy', 'Bob', 'David', 'Carrie', 'Barbara', 'Zach']
+
+nameFilter = [m for m in names if m[0] == 'B']
+print(nameFilter)
+
+
+==================================================================== 
