@@ -1,0 +1,222 @@
+https://codeshare.io/anXEmM
+Python1b
+
+Questions:
+<3<3<3 :D
+
+==================================================================================
+
+Question C - Darren (returns the index number from the original sentence)
+
+def find_second(findin, whattofind):
+    
+    first_occurence = findin.find(whattofind) # Here we are getting the index of the first time the word appears
+    substring = findin[first_occurence + len(whattofind):] # We slice the original sentence from the first index, remembering to add the length of the word
+    second_occurence = substring.find(whattofind) # Finding the second instance (which is the first index in the substring)
+    final_index = first_occurence + len(whattofind) + second_occurence # Add the two indices together with the length of the word to get the final index
+
+    return final_index
+        
+
+def find_second(findin, whattofind):
+    
+    f = findin.find(str(whattofind))
+    print(f)
+    sf = findin[f+1:]
+    print(sf)
+    m = sf.find(str(whattofind))
+    print(m+1)
+    return 0
+
+def find_second(findin, whattofind):    
+    f = findin[(findin.find(str(whattofind)))+1:].find(str(whattofind))
+    return(f+1)
+
+def find_second(findin, whattofind):
+    
+    splitted = findin.split(whattofind)
+    if len(splitted[0]) == 0:
+        print(whattofind + splitted[1])
+        return len(whattofind + splitted[1])
+    print(splitted[0] + whattofind + splitted[1])
+    return len(splitted[0] + whattofind + splitted[1])
+  
+#corrected version based on trainer's solution:
+def find_second(findin,whattofind):
+    second_instance_index=(findin[(findin.find(whattofind)+1):].find(whattofind))+(findin.find(whattofind)+1)
+    return second_instance_index
+print(find_second('dance, dance, dance everyday', 'dance'))
+print(find_second('learning about data, surprisingly, requires a lot of data','data'))
+  
+print(2>5)
+print(2 is 2)
+print(2 == 3)
+print((5>2)|(2>1))
+print((5>2)&(2>1))
+print('s' in 'datascience')
+print('x' in 'datascience')
+
+def starts_with_B(s):
+    if s[0] == 'B':
+        return('Yes')
+    else:
+        return('No')
+
+
+# Q2
+# Define a function named 'bigger' that receives two int/float 
+# variables a and b, compares them and 
+# returns the bigger value.
+def bigger(a,b):
+    if (a>b) :
+        return a
+    else :
+        return b
+
+bigger(3,5)
+
+# Q3
+# Nested if problem: Define a function named 'biggest' 
+# that takes three variables a,b,c and then which takes the largest of the three inputs and returns it.
+def biggest(a,b,c): 
+    if (a == max(a,b,c)):
+        return a 
+    elif (b == max(a,b,c)):
+        return b 
+    elif (c == max(a,b,c)): 
+        return c 
+    
+biggest(3,4,5)
+ (ass)
+  def biggest(a, b, c):
+    if a > b:
+        if a > c:
+            return a
+        else:
+            return c
+    else :
+        if b > c:
+            return b
+        else:
+            return c
+# List comprehension version for Q2 - Darren
+  
+  def bigger (x , y):
+    return x if x > y else y
+
+#Now use the for loop to print the items in the basket and count number of items in basket
+
+basket = ['banana','apple','durian','orange','rambutan']
+count = 0 # Initialise a counter 
+for x in basket:
+    count = count + 1
+    print (x + ': '+ "Total number of items so far is " +  str(count))
+  
+#Now use the for loop to print the items in the basket and count number of items in basket
+
+basket = ['banana','apple','durian','orange','rambutan']
+
+j = len(basket)
+for i in range(j):
+    print(basket[i])
+print("There are %d items in the basket."%(j))
+
+x = [3, 41, 12, 9, 74, 15]
+
+sum=0
+for s in range(0,len(x)):
+   sum=sum+x[s]
+print(sum)   
+  
+print(len(basket)) 
+  
+  
+Factorial:
+  
+def factorial(val):
+    li = range(1,val+1)
+    fac = 1
+    
+    for number in li:
+        fac *= number
+    
+    return(fac)
+  
+# recursion technique
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+print('\nPrint a string a number of times equal to the length of the string:\n')
+x = 'Dance'
+for itr in range (len(x)):
+    print(x)
+  
+  a = 'jump'
+b = len(a)
+i = 0 
+while i < b:
+    i = i +1 
+print(i)
+
+Exercise 1
+# C. fix_start
+# Given a string s, return a string
+# where all  occurences of its first char have
+# been changed to '*', except do not change
+# the first char itself.
+# e.g. 'babble' yields 'ba**le'
+# Assume that the string is length 1 or more.
+# Hint: s.replace(stra, strb) returns a version of string s
+# where all instances of stra have been replaced by strb.
+def fix_start(s):
+    #++ your code here ++
+    return s[0]+s[1:].replace(s[0], '*')
+
+print()
+print('fix_start')
+test(fix_start('babble'), 'ba**le')
+test(fix_start('aardvark'), 'a*rdv*rk')
+test(fix_start('google'), 'goo*le')
+test(fix_start('donut'), 'donut')
+  
+# My answers for Q1,Q2,Q3,Q4 by J
+def donuts(count):
+    return 'Number of donuts: many' if count>=10 else 'Number of donuts: ' + str(count)
+def both_ends(s):
+    return '' if len(s)<2 else s[:2]+s[-2:]
+def fix_start(s):
+    return s[0]+s.replace(s[0],'*')[1:]
+def mix_up(a, b):
+    return b[:2]+a[2:]+" "+a[:2]+b[2:]
+  
+#My answer by B
+  
+  def donuts(count): 
+    if count >= 10:
+        return("Number of donuts: {}".format("many"))
+    else:
+        return("Number of donuts: {}".format(count))
+  
+  def both_ends(s):
+    if len(s) >= 2:
+        tempString = s[0]+s[1]+s[(len(s))-2]+s[(len(s))-1]
+        return(tempString)
+    else:
+        return("")
+  
+  def fix_start(g):
+    character = ""
+    length = 0
+    character = g[0]
+    length = len(g)
+    return g[0]+g[1:].replace(g[0], '*')
+  
+  def mix_up(a, b):
+    subString1 = a[0]+a[1]
+    subString2 = b[0]+b[1]
+    a = a.replace(subString1, subString2)
+    b = b.replace(subString2, subString1)
+    return a + " " + b
+==================================================================================

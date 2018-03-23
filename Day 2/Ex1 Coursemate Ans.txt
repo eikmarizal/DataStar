@@ -1,0 +1,258 @@
+https://codeshare.io/aJ6eM6
+Questions:
+
+Type your questions here
+
+
+
+==================================================================================
+Ex1....
+
+Q1:
+def donuts(count):
+    if count < 10 and count >= 0:
+        return 'Number of donuts: %d'%(count)
+    else :
+        return 'Number of donuts: many'
+
+
+def donuts(count):
+    return 'Number of donuts: many' if count>=10 else 'Number of donuts: '+str(count)
+
+def donuts(count):
+    if count >= 10:
+        return 'Number of donuts: many'
+    else:
+        return ('Number of donuts: ' + str(count))
+
+Q2:
+factors
+def both_ends(s):
+    
+    if len(s) > 2:
+        return(s[0:2]+s[-2:])
+    else:
+        return("")
+        
+# Darren
+
+if len(s) < 2:
+        return str("")
+    else:
+        return (s[:2] + s[-2:])
+
+
+
+Q3:
+
+# Darren
+def fix_start(s):
+
+    return s[0] + s[1:].replace(s[0], "*")
+
+def fix_start(s):   
+    char = s[0]
+    s = s[1:]
+    if len(s) > 1:
+        print(s.replace(char,"*"))
+        return(char+s.replace(char,"*"))
+    else:
+        print("NA")
+
+def fix_start(s):
+    #++ your code here ++
+    return s[0]+s[1:].replace(s[0], '*')
+
+def fix_start(s):
+    for n in s:
+        if n == s[0]:
+            g = s[1:].replace(n,"*")
+            return (s[0] + g)
+        else:
+            return "NA"
+Q4:
+
+def mix_up(a, b):
+                                                                                   
+    st = a[0:2]
+    nd = b[0:2]
+    
+    return(a.replace(a[0:2],nd) +" "+ b.replace(b[0:2],st))
+  
+# Jethro
+def mix_up(a, b):
+    return b[:2]+a[2:]+" "+a[:2]+b[2:]
+    
+# Darren
+def mix_up(a, b):
+    
+    a_front = a[:2]
+    b_front = b[:2]
+    
+    return (b_front + a[2:] + ' ' + a_front + b[2:])    
+
+def mix_up(a, b):
+    a2 = a
+    a = b[:2] + a[2:]
+    b = a2[:2] + b[2:]
+
+    return a + " "+ b
+    
+#Brad
+
+def mix_up(a, b):
+    subString1 = a[0]+a[1]
+    subString2 = b[0]+b[1]
+    a = a.replace(subString1, subString2)
+    b = b.replace(subString2, subString1)
+    return a + " " + b
+    
+def mix_up(a, b):
+    a1 = b[:2] + a[2:]
+    b1 = a[:2] + b[2:]
+    
+    return ('{} {}'.format(a1,b1))
+
+
+for i in range(len(countries)-1):
+    print(countries[i][0],':',countries[i][2]/countries[3][2], 'times')
+
+malaysia_pop = countries[3][2]
+factors = []
+for elements in range(0,3): 
+    factors.append(countries[elements][2]/malaysia_pop)
+print({'China': factors[0], 'India': factors[1], 'US': factors[2]})
+
+msiaPop = countries[3][2]
+for element in countries:
+    if element[0]!= "Malaysia":
+        pop = element[2]
+        print("{} is {} times bigger than Malaysia".format(element[0], int(element[2]/msiaPop)))
+
+# Jethro's country thingy
+for i in countries[:-1]:
+    print(i[0],'is bigger than',countries[-1][0],'by',int(i[-1]/countries[-1][-1]),'times')
+    
+
+
+Rish: sample answer
+
+Method_1:
+====
+countries = [['China','Beijing', 1350],
+             ['India','New Delhi',1210],
+             ['United States','Washington DC', 309],
+             ['Malaysia','Kuala Lumpur',29]]
+
+# How many times bigger is the population of 
+# China, India, and the US relative to Malaysia?
+
+for country in countries:
+    if country[0] != 'Malaysia':
+        print("{} is bigger than Malaysia by {}".format(country[0],int(country[-1]/countries[3][2])))
+
+Method_2
+====        
+for i in range(3):
+    x = countries[3][-1]
+    print(countries[i][0]+" is %d times bigger." % (countries[i][2]/x))
+    
+Method_3
+===
+print ('The population of {} is {} times bigger relative to {}"'.format(countries[0][0],countries[0][-1]/countries[3][-1],countries[3][0]))
+print ('The population of {} is {} times bigger relative to {}"'.format(countries[1][0],countries[1][-1]/countries[3][-1],countries[3][0]))
+print ('The population of {} is {} times bigger relative to {}"'.format(countries[2][0],countries[2][-1]/countries[3][-1],countries[3][0]))
+
+# Darren
+
+# Practice question!
+# Define a function that inputs a string with the month and returns the number 
+# of days in that month.
+
+def month_day(month): 
+    months = ["January", "February", "March", "April", "May", "June", "July",\
+          "August", "September", "October", "November", "December"]
+    days = [31,28,31,30,31,30,31,31,30,31,30,31]
+    
+    return days[months.index(month)] # Get the index of the first list and apply that to the second list
+
+month_day('February')
+
+# Rish
+
+def month_day2(month):
+    months = ["January", "February", "March", "April", "May", "June", "July",\
+          "August", "September", "October", "November", "December"]
+    days = [31,28,31,30,31,30,31,31,30,31,30,31]
+    m_idx = months.index(month)
+    return days[m_idx]
+
+B
+
+def month_day(inputMonth):
+    found = False
+    months = [["January", 31], ["February", 28], ["March", 31]\
+             ,["April", 30], ["May", 31], ["June", 30], ["July", 31]\
+             ,["August", 31], ["September", 30], ["October", 31]\
+             ,["November", 30], ["December", 31]]
+    for monthName in months:
+        if inputMonth == monthName[0]:
+            found = True
+            return("{} has {} days".format(inputMonth, monthName[1]))
+    if found!=True:
+        return("Month not found!")
+
+# Jethro again
+def month_day(month):
+    months=['January','February','March','April','May','June','July','August','September','October','November','December']
+    days=[31,28,31,30,31,30,31,31,30,31,30,31]
+    return days[months.index(month)]
+
+
+# For every email (or name) that has .com in the email, 
+# save it in the newdict
+# print both the emails and newdict
+newdict = {}
+for name,mail in list(emails.items()):
+    if '.com' in mail:
+        newdict[name]=mail
+
+print(emails)
+print()
+print(newdict)
+
+# credited to Philip
+print(dict((key, value) for key, value in emails.items() if '.com' in value))
+
+for k, v in goods.items(): 
+    goods[k] = v * 1.2
+
+#Increase food price by 20%
+for food,price in list(goods.items()):
+    price = price * 1.2
+    goods[food] = price
+
+print(goods)
+
+        # we indend code inside the with block
+        print(("File closed? ", input_file.closed))
+
+        # Throw away the first 4 lines
+        # Notice that we are reading the first 4 lines 
+        # but we are not doing anything with them
+        # Using the _ name is a Python convention for a 
+        #  variable name that we are not going to use
+        for j in range(4):
+            _ = input_file.readline()
+
+        # Iterate over remaining lines
+        for line in input_file.readlines():
+            nbottles = int(line.split()[0])
+
+            # Check if nbottles is a multiple of 7
+            if nbottles % 7 == 0:
+                print(nbottles)
+                output_file.write('%d\n'%(nbottles))
+
+==================================================================================
+                
