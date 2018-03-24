@@ -13,6 +13,7 @@ A 6-month paid finishing school for graduates that include 2 months of intensive
 - [Day 4: Handling Large Data with NumPy](https://github.com/eikmarizal/DataStar/tree/master/Day%204)
 - [Day 5: Data Manipulation and Analysis with Pandas](https://github.com/eikmarizal/DataStar/tree/master/Day%205)
 - [Day 6: Data Visualization with Matplotlib](https://github.com/eikmarizal/DataStar/tree/master/Day%206)
+- [Assessment Python](https://github.com/eikmarizal/DataStar/tree/master/Assessment%20Python)
 
 Thank you for your visit and spending your time.
 
