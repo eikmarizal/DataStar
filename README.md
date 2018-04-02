@@ -14,6 +14,9 @@ A 6-month paid finishing school for graduates that include 2 months of intensive
 - [Day 5: Data Manipulation and Analysis with Pandas](https://github.com/eikmarizal/DataStar/tree/master/Day%205)
 - [Day 6: Data Visualization with Matplotlib](https://github.com/eikmarizal/DataStar/tree/master/Day%206)
 - [Assessment Python](https://github.com/eikmarizal/DataStar/tree/master/Assessment%20Python)
+- [Assessment R](https://github.com/eikmarizal/DataStar/tree/master/Assessment%20R)
+- [Data- Knowledge And Science- Thinking Outside Data](https://github.com/eikmarizal/DataStar/tree/master/Data-%20Knowledge%20And%20Science-%20Thinking%20Outside%20Data)
+- [Graph Theory And Applications](https://github.com/eikmarizal/DataStar/tree/master/Graph%20Theory%20And%20Applications)
 
 Thank you for your visit and spending your time.
 
