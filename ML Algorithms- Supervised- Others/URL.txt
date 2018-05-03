@@ -1,0 +1,3 @@
+http://bit.ly/PyMLDSMay2018
+
+SVM parameters - https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf
