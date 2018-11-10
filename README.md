@@ -1,4 +1,4 @@
-[![Progress](https://img.shields.io/badge/Progress-15%25-orange.svg)]()
+[![Progress](https://img.shields.io/badge/Progress-70%25-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Incomplete-orange.svg)]()
 
 ##### This notes and exercises use for training purpose only.
@@ -17,6 +17,7 @@ A 6-month paid finishing school for graduates that include 2 months of intensive
 - [Assessment R](https://github.com/eikmarizal/DataStar/tree/master/Assessment%20R)
 - [Data- Knowledge And Science- Thinking Outside Data](https://github.com/eikmarizal/DataStar/tree/master/Data-%20Knowledge%20And%20Science-%20Thinking%20Outside%20Data)
 - [Graph Theory And Applications](https://github.com/eikmarizal/DataStar/tree/master/Graph%20Theory%20And%20Applications)
+- [Others](https://github.com/eikmarizal/DataStar)
 
 Thank you for your visit and spending your time.
 
