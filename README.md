@@ -1,4 +1,4 @@
-[![Progress](https://img.shields.io/badge/Progress-70%25-blue.svg)]()
+[![Progress](https://img.shields.io/badge/Progress-80%25-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Incomplete-orange.svg)]()
 
 ##### This notes and exercises use for training purpose only.
@@ -23,4 +23,4 @@ Thank you for your visit and spending your time.
 
 ## License / Credit
 
-[![Adax](http://adax.asia/wp-content/uploads/2017/03/logo_adax.png)](http://adax.asia/datastar/)
+ASEAN Data Analytic Exchange (ADAX) 
